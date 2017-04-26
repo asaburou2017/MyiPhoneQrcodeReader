@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShareTea_Card" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="48N-hI-PhX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyn-le-ZbA">
+                                <rect key="frame" x="108" y="456" width="199" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="a1u-e5-Nqr"/>
+                                    <constraint firstAttribute="width" constant="199" id="koP-0u-HfD"/>
+                                </constraints>
+                                <state key="normal" image="im done banner"/>
+                                <connections>
+                                    <action selector="doneTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8WO-TN-g0Y"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1t-aP-DDB">
+                                <rect key="frame" x="108" y="456" width="199" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="199" id="dU0-wm-MxO"/>
+                                    <constraint firstAttribute="height" constant="67" id="qqJ-cV-5d8"/>
+                                </constraints>
+                                <state key="normal" title="Redeem!" image="redeem banner"/>
+                                <connections>
+                                    <action selector="redeemTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9an-wn-nL0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6P-Qs-4tX">
+                                <rect key="frame" x="108" y="456" width="199" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="k6Q-vt-g5K"/>
+                                    <constraint firstAttribute="width" constant="199" id="qZz-Kf-R2c"/>
+                                </constraints>
+                                <state key="normal" title="Redeem Stamp(s)" image="redeem banner"/>
+                                <connections>
+                                    <action selector="editTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qoc-8L-iZB"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tap on cup to redeem" translatesAutoresizingMaskIntoConstraints="NO" id="jTG-AZ-RvE">
+                                <rect key="frame" x="47" y="390" width="320" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Jz4-AT-KdM"/>
+                                    <constraint firstAttribute="height" constant="30" id="vqc-Tr-6vb"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="CSl-eT-AZf">
+                                <rect key="frame" x="26" y="200" width="366" height="66"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JL-P2-lno">
+                                        <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" selected="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="A1s-Iy-6hW"/>
+                                            <constraint firstAttribute="width" constant="66" id="IUy-AS-vMM"/>
+                                        </constraints>
+                                        <state key="normal" image="empty_glass"/>
+                                        <state key="selected" image="selectedStar"/>
+                                        <connections>
+                                            <action selector="selectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VmU-KI-jaG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvN-pw-XKD">
+                                        <rect key="frame" x="75" y="0.0" width="66" height="66"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" selected="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="Ygl-ZY-Ij2"/>
+                                            <constraint firstAttribute="width" constant="66" id="usP-Bt-wak"/>
+                                        </constraints>
+                                        <state key="normal" image="empty_glass"/>
+                                        <state key="selected" image="selectedStar"/>
+                                        <connections>
+                                            <action selector="selectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kRZ-ia-pkN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pX9-NE-ZKV">
+                                        <rect key="frame" x="150" y="0.0" width="66" height="66"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" selected="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="66" id="VUh-lc-nz3"/>
+                                            <constraint firstAttribute="height" constant="66" id="gRh-DI-xIB"/>
+                                        </constraints>
+                                        <state key="normal" image="empty_glass"/>
+                                        <state key="selected" image="selectedStar"/>
+                                        <connections>
+                                            <action selector="selectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HeI-ZX-biF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fn-kc-Ibw">
+                                        <rect key="frame" x="225" y="0.0" width="66" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="ET8-gv-Ip3"/>
+                                            <constraint firstAttribute="width" constant="66" id="anh-Mr-L6N"/>
+                                        </constraints>
+                                        <state key="normal" image="empty_glass"/>
+                                        <state key="selected" image="selectedStar"/>
+                                        <connections>
+                                            <action selector="selectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Igj-dm-cyz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAT-GA-hEa">
+                                        <rect key="frame" x="300" y="0.0" width="66" height="66"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" selected="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="66" id="Mrx-gb-k9S"/>
+                                            <constraint firstAttribute="height" constant="66" id="f5D-24-Ina"/>
+                                        </constraints>
+                                        <state key="normal" image="empty_glass"/>
+                                        <state key="selected" image="selectedStar"/>
+                                        <connections>
+                                            <action selector="selectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IKP-Qb-1hH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="cN1-q3-kGK">
+                                <rect key="frame" x="26" y="274" width="366" height="66"/>
+                                <subviews>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9C9-tH-4Mk">
+                                        <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="66" id="gKI-Yl-htY"/>
+                                            <constraint firstAttribute="height" constant="66" id="swd-Vu-uTQ"/>
+                                        </constraints>
+                                        <state key="normal" image="empty_glass"/>
+                                        <state key="selected" image="selectedStar"/>
+                                        <connections>
+                                            <action selector="selectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VcT-RJ-iDU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fR-eQ-SDS">
+                                        <rect key="frame" x="75" y="0.0" width="66" height="66"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" selected="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="Rkz-dF-aYs"/>
+                                            <constraint firstAttribute="width" constant="66" id="Upl-p2-ylw"/>
+                                        </constraints>
+                                        <state key="normal" image="empty_glass"/>
+                                        <state key="selected" image="selectedStar"/>
+                                        <connections>
+                                            <action selector="selectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qBc-cf-TrO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKU-Da-DOF">
+                                        <rect key="frame" x="150" y="0.0" width="66" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="MYA-pl-ga9"/>
+                                            <constraint firstAttribute="width" constant="66" id="eoR-Fr-e64"/>
+                                        </constraints>
+                                        <state key="normal" image="empty_glass"/>
+                                        <state key="selected" image="selectedStar"/>
+                                        <connections>
+                                            <action selector="selectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hnc-01-elE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0S-8Y-lrW">
+                                        <rect key="frame" x="225" y="0.0" width="66" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="66" id="Ncl-EN-nR9"/>
+                                            <constraint firstAttribute="height" constant="66" id="zVV-Ae-elf"/>
+                                        </constraints>
+                                        <state key="normal" image="empty_glass"/>
+                                        <state key="selected" image="selectedStar"/>
+                                        <connections>
+                                            <action selector="selectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YVs-QO-DS9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVu-RL-aJu">
+                                        <rect key="frame" x="300" y="0.0" width="66" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="66" id="F8M-dF-A0p"/>
+                                            <constraint firstAttribute="height" constant="66" id="lOm-TF-iOI"/>
+                                        </constraints>
+                                        <state key="normal" image="empty_glass"/>
+                                        <state key="selected" image="selectedStar"/>
+                                        <connections>
+                                            <action selector="selectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="srG-DK-Itj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="cN1-q3-kGK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="6" id="2A5-bU-b7i"/>
+                            <constraint firstItem="t6P-Qs-4tX" firstAttribute="top" secondItem="jTG-AZ-RvE" secondAttribute="bottom" constant="36" id="2ma-oh-1xr"/>
+                            <constraint firstItem="t6P-Qs-4tX" firstAttribute="top" secondItem="jTG-AZ-RvE" secondAttribute="bottom" constant="36" id="8cw-eS-LQQ"/>
+                            <constraint firstItem="h1t-aP-DDB" firstAttribute="top" secondItem="jTG-AZ-RvE" secondAttribute="bottom" constant="36" id="9is-CS-Bfs"/>
+                            <constraint firstAttribute="trailing" secondItem="48N-hI-PhX" secondAttribute="trailing" id="JoB-fq-dRM"/>
+                            <constraint firstItem="cN1-q3-kGK" firstAttribute="top" secondItem="CSl-eT-AZf" secondAttribute="bottom" constant="8" id="K1L-NQ-dgc"/>
+                            <constraint firstItem="48N-hI-PhX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Kro-a4-Rh4"/>
+                            <constraint firstItem="cyn-le-ZbA" firstAttribute="top" secondItem="jTG-AZ-RvE" secondAttribute="bottom" constant="36" id="RGR-ZO-XS6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h1t-aP-DDB" secondAttribute="trailing" constant="87" id="RhW-Ml-WRW"/>
+                            <constraint firstItem="CSl-eT-AZf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="180" id="VJO-Pm-mv5"/>
+                            <constraint firstItem="cyn-le-ZbA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="88" id="WDR-0e-m2K"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cyn-le-ZbA" secondAttribute="trailing" constant="87" id="XnU-YT-fh3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CSl-eT-AZf" secondAttribute="trailing" constant="2" id="amF-DL-mYc"/>
+                            <constraint firstItem="t6P-Qs-4tX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="88" id="cII-Ko-RG3"/>
+                            <constraint firstItem="jTG-AZ-RvE" firstAttribute="centerX" secondItem="h1t-aP-DDB" secondAttribute="centerX" id="d8e-ES-70q"/>
+                            <constraint firstItem="48N-hI-PhX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eXw-Lm-G4S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t6P-Qs-4tX" secondAttribute="trailing" constant="87" id="inp-uA-aBa"/>
+                            <constraint firstItem="h1t-aP-DDB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="88" id="kZG-VH-bDe"/>
+                            <constraint firstItem="CSl-eT-AZf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="6" id="otf-FD-ZKP"/>
+                            <constraint firstItem="jTG-AZ-RvE" firstAttribute="top" secondItem="cN1-q3-kGK" secondAttribute="bottom" constant="50" id="q4G-FQ-MeL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="48N-hI-PhX" secondAttribute="bottom" id="w5f-VP-DJv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cN1-q3-kGK" secondAttribute="trailing" constant="2" id="zPW-Lj-GvS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="doneOutlet" destination="cyn-le-ZbA" id="3WP-qS-OLd"/>
+                        <outlet property="editOutlet" destination="t6P-Qs-4tX" id="7bt-6N-Cpd"/>
+                        <outlet property="redeemOutlet" destination="h1t-aP-DDB" id="gTr-A5-F8r"/>
+                        <outlet property="redeemStarsLblTxt" destination="jTG-AZ-RvE" id="3aP-fW-WKd"/>
+                        <outletCollection property="latteButtonCollection" destination="8JL-P2-lno" collectionClass="NSMutableArray" id="LKG-od-b1n"/>
+                        <outletCollection property="latteButtonCollection" destination="lvN-pw-XKD" collectionClass="NSMutableArray" id="Rbv-bD-dG7"/>
+                        <outletCollection property="latteButtonCollection" destination="pX9-NE-ZKV" collectionClass="NSMutableArray" id="Mc2-Bh-iCY"/>
+                        <outletCollection property="latteButtonCollection" destination="0fn-kc-Ibw" collectionClass="NSMutableArray" id="R9E-YB-WNH"/>
+                        <outletCollection property="latteButtonCollection" destination="PAT-GA-hEa" collectionClass="NSMutableArray" id="dDI-f0-lof"/>
+                        <outletCollection property="latteButtonCollection" destination="9C9-tH-4Mk" collectionClass="NSMutableArray" id="Spu-DW-Hwa"/>
+                        <outletCollection property="latteButtonCollection" destination="2fR-eQ-SDS" collectionClass="NSMutableArray" id="u0z-3S-kgY"/>
+                        <outletCollection property="latteButtonCollection" destination="ZKU-Da-DOF" collectionClass="NSMutableArray" id="FV9-Lb-tJD"/>
+                        <outletCollection property="latteButtonCollection" destination="k0S-8Y-lrW" collectionClass="NSMutableArray" id="YJF-ZJ-MEF"/>
+                        <outletCollection property="latteButtonCollection" destination="fVu-RL-aJu" collectionClass="NSMutableArray" id="pVr-NS-a7t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="371.01449275362324" y="311.41304347826087"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="1080" height="1920"/>
+        <image name="empty_glass" width="186" height="185"/>
+        <image name="im done banner" width="530" height="180"/>
+        <image name="redeem banner" width="530" height="180"/>
+        <image name="selectedStar" width="186" height="185"/>
+        <image name="tap on cup to redeem" width="776" height="61"/>
+    </resources>
+</document>
